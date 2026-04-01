@@ -33,16 +33,16 @@ export default function BusinessPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
             Connectivity That <span className="gradient-text">Empowers Business</span>
           </h1>
-          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+          <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] mb-12 font-sans">
             Power your organization with enterprise-grade fiber internet, designed for reliability, security, and performance.
           </p>
-          <Button asChild className="btn-signature-primary px-8 py-3 text-lg font-serif font-bold rounded-xl">
-            <a href="https://wa.me/23230668178" target="_blank" rel="noopener noreferrer">
+          <Button asChild className="btn-signature-primary px-10 py-4 text-lg font-serif font-bold rounded-xl">
+            <a href="https://wa.me/23233233620" target="_blank" rel="noopener noreferrer">
               Contact Sales
             </a>
           </Button>
@@ -50,35 +50,35 @@ export default function BusinessPage() {
       </section>
 
       {/* Solutions */}
-      <section className="py-16 sm:py-20 bg-white text-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif mb-4 text-[#001BB7]">
+      <section className="py-20 sm:py-32 min-h-screen flex items-center bg-white text-[#0f0d1e]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="text-center mb-16 sm:mb-24">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif mb-6 text-[#0f0d1e]">
               Tailored Business Solutions
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto font-sans leading-relaxed">
+            <p className="text-xl text-[#6d6888] max-w-3xl mx-auto font-sans leading-relaxed">
               From startups to large enterprises, we provide connectivity solutions that drive growth and innovation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {solutions.map((solution, index) => (
               <Card
                 key={index}
-                className="rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col"
+                className="rounded-2xl border border-[#e8e5f5] hover:-translate-y-2 transition-all duration-300 flex flex-col"
               >
                 <CardHeader>
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4 bg-orange-100">
-                    <solution.icon className="w-8 h-8 text-orange-500" />
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center mb-6 bg-[#FFB547]/20">
+                    <solution.icon className="w-8 h-8 text-[#FFB547]" />
                   </div>
-                  <CardTitle className="text-2xl font-bold font-serif text-[#090040]">
+                  <CardTitle className="text-2xl font-bold font-serif text-[#0f0d1e]">
                     {solution.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex flex-col flex-grow">
-                  <p className="mb-6 font-sans flex-grow text-gray-600">{solution.description}</p>
+                  <p className="mb-8 font-sans flex-grow text-[#6d6888]">{solution.description}</p>
                   <Button
                     variant="outline"
-                    className="mt-auto rounded-lg w-fit border-gray-300 text-gray-700 hover:bg-gray-100"
+                    className="mt-auto rounded-lg w-fit border-[#e8e5f5] text-[#6d6888] hover:bg-[#f0eefb]"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -90,21 +90,21 @@ export default function BusinessPage() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-[#f8f7ff]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold font-serif text-center text-[#001BB7] mb-12">
+          <h2 className="text-4xl sm:text-5xl font-bold font-serif text-center text-[#0f0d1e] mb-16">
             Why Businesses Choose Us
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { value: '99.99%', label: 'Uptime SLA' },
               { value: '24/7', label: 'Dedicated Support' },
               { value: '10 Gbps', label: 'Max Speed' },
               { value: '48hrs', label: 'Installation' },
             ].map((item, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-xl shadow-md">
-                <div className="text-3xl font-bold gradient-text font-serif mb-2">{item.value}</div>
-                <div className="text-gray-600 font-sans">{item.label}</div>
+              <div key={index} className="text-center p-8 bg-white rounded-xl border border-[#e8e5f5]">
+                <div className="text-4xl font-bold gradient-text font-serif mb-3">{item.value}</div>
+                <div className="text-[#6d6888] font-sans">{item.label}</div>
               </div>
             ))}
           </div>

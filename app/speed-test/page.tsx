@@ -9,38 +9,38 @@ export default function SpeedTestPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
             Internet <span className="gradient-text">Speed Test</span>
           </h1>
-          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+          <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             Check your internet speed directly from your browser to see how fast your connection is right now.
           </p>
         </div>
       </section>
 
       {/* Speed Test Widget */}
-      <section className="py-14 lg:py-24 bg-gray-50 flex justify-center">
+      <section className="py-20 lg:py-32 bg-[#f8f7ff] flex justify-center">
         <div className="w-full max-w-4xl mx-auto px-4">
           <iframe
             width="100%"
             height="650px"
             frameBorder="0"
             src="//openspeedtest.com/Get-widget.php"
-            className="rounded-xl shadow-2xl"
+            className="rounded-xl"
             title="Speed Test"
           />
         </div>
       </section>
 
       {/* Tips Section */}
-      <section className="py-14 lg:py-24 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl text-center text-[#001BB7] font-bold mb-12">
+          <h2 className="font-serif text-4xl text-center text-[#0f0d1e] font-bold mb-16">
             Tips for Accurate Results
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {[
               {
                 title: 'Close Other Applications',
@@ -59,9 +59,9 @@ export default function SpeedTestPage() {
                 desc: 'Older devices may not support the full speeds of your internet plan.',
               },
             ].map((tip, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl">
-                <h3 className="font-bold font-serif text-[#090040] mb-2">{tip.title}</h3>
-                <p className="text-gray-600 font-sans text-sm">{tip.desc}</p>
+              <div key={index} className="bg-[#f8f7ff] p-8 rounded-xl border border-[#e8e5f5]">
+                <h3 className="font-bold font-serif text-[#0f0d1e] mb-3 text-lg">{tip.title}</h3>
+                <p className="text-[#6d6888] font-sans">{tip.desc}</p>
               </div>
             ))}
           </div>

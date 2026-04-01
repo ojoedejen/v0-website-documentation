@@ -11,7 +11,7 @@ const faqItems = [
   {
     question: 'What speeds and data allowances do you offer?',
     answer:
-      'We offer plans starting from 10 Mbps up to custom enterprise solutions. All our plans come with unlimited monthly data, so you never have to worry about caps or throttling.',
+      'We offer residential plans from 15 Mbps (Nex Access) to 50 Mbps (Nex Plus), and business plans from 100 Mbps to 250 Mbps. All our plans come with unlimited monthly data, so you never have to worry about caps or throttling.',
   },
   {
     question: 'How does the installation process work and what is the cost?',
@@ -31,34 +31,34 @@ const faqItems = [
   {
     question: 'What kind of customer support is available?',
     answer:
-      '24/7 premium support is available at +232 33 31 31 04, +232 74 507 552, or +232 78 31 31 04. Our technical NOC team and customer service representatives are always ready to assist you.',
+      '24/7 premium support is available at +232 33 23 36 20. Our technical NOC team and customer service representatives are always ready to assist you.',
   },
 ]
 
 export default function FaqSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-[#001BB7] mb-4">
+    <section className="py-24 sm:py-32 lg:py-40 min-h-screen flex items-center bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="text-center mb-16 lg:mb-24">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#0f0d1e] mb-6">
             Frequently Asked <span className="gradient-text">Questions</span>
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto font-sans">
+          <p className="text-[#6d6888] text-lg sm:text-xl max-w-2xl mx-auto font-sans">
             Find answers to common questions about our services.
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-5">
           {faqItems.map((item, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
-              className="bg-gray-50 rounded-xl border border-gray-100 px-6 data-[state=open]:shadow-lg transition-shadow"
+              className="bg-[#f8f7ff] rounded-xl border border-[#e8e5f5] px-8 data-[state=open]:bg-white transition-colors"
             >
-              <AccordionTrigger className="text-left text-base sm:text-lg font-semibold font-serif text-[#090040] hover:text-[#001BB7] py-6 hover:no-underline">
+              <AccordionTrigger className="text-left text-lg sm:text-xl font-semibold font-serif text-[#0f0d1e] hover:text-[#7C5CF6] py-8 hover:no-underline">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-gray-600 font-sans pb-6 leading-relaxed">
+              <AccordionContent className="text-[#6d6888] font-sans pb-8 leading-relaxed text-base">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>

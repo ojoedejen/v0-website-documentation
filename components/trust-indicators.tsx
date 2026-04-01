@@ -9,12 +9,12 @@ const partnerLogos = [
 
 export default function TrustIndicators() {
   return (
-    <section className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-center text-lg sm:text-xl font-semibold font-serif text-[#090040] mb-8">
+        <h3 className="text-center text-xl sm:text-2xl font-semibold font-serif text-[#0f0d1e] mb-12">
           Trusted by Leading Organizations
         </h3>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+        <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16 lg:gap-20">
           {partnerLogos.map((logo, index) => (
             <div
               key={index}

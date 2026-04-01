@@ -17,7 +17,7 @@ const guides = [
   {
     title: 'Troubleshooting Slow Internet Speeds',
     content:
-      'If your internet is slow: 1. Restart your router by unplugging it for 30 seconds. 2. Move closer to your WiFi router. 3. Disconnect unused devices. 4. Check for outages on our Network Status page. 5. If the problem persists, contact our 24/7 support.',
+      'If your internet is slow: 1. Restart your router by unplugging it for 30 seconds. 2. Move closer to your WiFi router. 3. Disconnect unused devices. 4. Check for outages on our Network Status page. 5. If the problem persists, contact our 24/7 support at +232 33 23 36 20.',
   },
   {
     title: 'Understanding Your Monthly Bill',
@@ -48,34 +48,34 @@ export default function KnowledgeBasePage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
             Knowledge <span className="gradient-text">Base</span>
           </h1>
-          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+          <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             Browse our comprehensive guides and tutorials to get the most out of your Signature Connect service.
           </p>
         </div>
       </section>
 
       {/* Guides */}
-      <section className="py-14 lg:py-24 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-[#f8f7ff]">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-3xl text-center text-[#001BB7] font-bold mb-12">
+          <h2 className="font-serif text-4xl text-center text-[#0f0d1e] font-bold mb-16">
             FAQ & Guides
           </h2>
-          <Accordion type="single" collapsible className="w-full space-y-4">
+          <Accordion type="single" collapsible className="w-full space-y-5">
             {guides.map((guide, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-white rounded-xl border border-gray-100 shadow-sm px-6"
+                className="bg-white rounded-xl border border-[#e8e5f5] px-8"
               >
-                <AccordionTrigger className="text-lg font-semibold text-left py-6 hover:no-underline font-serif text-[#090040]">
+                <AccordionTrigger className="text-lg font-semibold text-left py-8 hover:no-underline font-serif text-[#0f0d1e] hover:text-[#7C5CF6]">
                   {guide.title}
                 </AccordionTrigger>
-                <AccordionContent className="pb-6 text-gray-600 font-sans leading-relaxed">
+                <AccordionContent className="pb-8 text-[#6d6888] font-sans leading-relaxed">
                   {guide.content}
                 </AccordionContent>
               </AccordionItem>

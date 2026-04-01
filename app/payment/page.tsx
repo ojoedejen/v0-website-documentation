@@ -58,16 +58,16 @@ Purpose of Payment: ${formData.purposeOfPayment}`
       <div className="min-h-screen bg-white">
         <TopBanner />
         <Header />
-        <div className="premium-gradient flex items-center justify-center py-24 sm:py-32 px-4">
-          <div className="text-center bg-white/10 backdrop-blur-sm p-8 sm:p-12 rounded-3xl max-w-2xl mx-auto glass-card-strong">
-            <CheckCircle className="w-16 h-16 text-[#FFCC00] mx-auto mb-6" />
-            <h1 className="text-3xl sm:text-4xl font-bold font-serif text-white mb-4">
+        <div className="premium-gradient flex items-center justify-center py-32 sm:py-40 px-4 min-h-[70vh]">
+          <div className="text-center bg-white/10 backdrop-blur-sm p-10 sm:p-14 rounded-3xl max-w-2xl mx-auto glass-card-strong">
+            <CheckCircle className="w-20 h-20 text-[#FFB547] mx-auto mb-8" />
+            <h1 className="text-4xl sm:text-5xl font-bold font-serif text-white mb-6">
               Confirmation Received!
             </h1>
-            <p className="text-lg text-blue-100 mb-8 font-sans">
+            <p className="text-xl text-[#bdb8d8] mb-10 font-sans">
               Thank you for your submission. Our team will verify your payment and contact you shortly.
             </p>
-            <Button asChild className="btn-signature-primary px-8 py-3 text-lg font-serif font-bold rounded-xl">
+            <Button asChild className="btn-signature-primary px-10 py-4 text-lg font-serif font-bold rounded-xl">
               <Link href="/">Back to Home</Link>
             </Button>
           </div>
@@ -78,33 +78,33 @@ Purpose of Payment: ${formData.purposeOfPayment}`
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#f8f7ff]">
       <TopBanner />
       <Header />
-      <div className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8">
+      <div className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-gray-800">
-              Complete Your <span className="text-orange-500">Subscription</span>
+          <div className="text-center mb-16">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-serif text-[#0f0d1e]">
+              Complete Your <span className="gradient-text">Subscription</span>
             </h1>
-            <p className="mt-4 text-lg text-gray-600 font-sans">
+            <p className="mt-6 text-xl text-[#6d6888] font-sans">
               You&apos;re one step away from lightning-fast internet.
             </p>
           </div>
 
-          <div className="mb-12">
+          <div className="mb-16">
             <img
               src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/c4cdc1bb3_family-creating-digital-content.jpg"
               alt="Family enjoying internet"
-              className="rounded-2xl shadow-xl w-full object-cover h-64 sm:h-80 md:h-96"
+              className="rounded-2xl w-full object-cover h-64 sm:h-80 md:h-96"
             />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
             {/* Payment Options */}
             <div>
-              <div className="bg-white p-8 shadow-lg rounded-2xl">
-                <h2 className="text-2xl font-bold text-[#001BB7] font-serif mb-4">
+              <div className="bg-white p-10 rounded-2xl border border-[#e8e5f5]">
+                <h2 className="text-2xl font-bold text-[#0f0d1e] font-serif mb-6">
                   Complete Your Subscription
                 </h2>
                 <a
@@ -112,45 +112,45 @@ Purpose of Payment: ${formData.purposeOfPayment}`
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Button className="w-full btn-signature-primary py-4 text-lg mb-6">
+                  <Button className="w-full btn-signature-primary py-4 text-lg mb-8">
                     Pay Now - Quick & Secure
                   </Button>
                 </a>
-                <p className="text-gray-500 text-center mb-4 font-sans">
+                <p className="text-[#6d6888] text-center mb-6 font-sans">
                   Or scan to pay with one of our partners
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 items-center">
                   <img
                     src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/689536d778d0bd14e66d561d/8f4ee178c_image.png"
                     alt="Vult.me QR"
-                    className="rounded-lg shadow-md w-full"
+                    className="rounded-lg w-full"
                   />
                   <div className="grid grid-cols-2 gap-4">
                     <img
                       src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/689536d778d0bd14e66d561d/adb7ba220_image.png"
                       alt="Afrimoney QR"
-                      className="rounded-lg shadow-md w-full"
+                      className="rounded-lg w-full"
                     />
                     <img
                       src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/689536d778d0bd14e66d561d/fb5c7d4be_image.png"
                       alt="Orange Money QR"
-                      className="rounded-lg shadow-md w-full"
+                      className="rounded-lg w-full"
                     />
                   </div>
                 </div>
-                <div className="p-4 bg-gray-100 rounded-lg mt-6">
-                  <h3 className="font-bold font-serif">Bank Deposit</h3>
-                  <p className="font-sans text-sm">
-                    Account Name: <strong>Signature-Connect Limited</strong>
+                <div className="p-5 bg-[#f8f7ff] rounded-lg mt-8 border border-[#e8e5f5]">
+                  <h3 className="font-bold font-serif text-[#0f0d1e]">Bank Deposit</h3>
+                  <p className="font-sans text-sm text-[#6d6888]">
+                    Account Name: <strong className="text-[#0f0d1e]">Signature-Connect Limited</strong>
                   </p>
-                  <p className="font-sans text-sm">
-                    Bank: <strong>Rokel Commercial Bank SL Ltd</strong>
+                  <p className="font-sans text-sm text-[#6d6888]">
+                    Bank: <strong className="text-[#0f0d1e]">Rokel Commercial Bank SL Ltd</strong>
                   </p>
-                  <p className="font-sans text-sm">
-                    Account No: <strong>0182978551102</strong>
+                  <p className="font-sans text-sm text-[#6d6888]">
+                    Account No: <strong className="text-[#0f0d1e]">0182978551102</strong>
                   </p>
-                  <p className="font-sans text-sm">
-                    Currency: <strong>SLE</strong>
+                  <p className="font-sans text-sm text-[#6d6888]">
+                    Currency: <strong className="text-[#0f0d1e]">SLE</strong>
                   </p>
                 </div>
               </div>
@@ -158,17 +158,17 @@ Purpose of Payment: ${formData.purposeOfPayment}`
 
             {/* Manual Payment Form */}
             <div>
-              <Card className="shadow-lg rounded-2xl">
+              <Card className="rounded-2xl border border-[#e8e5f5]">
                 <CardHeader>
-                  <CardTitle className="text-2xl font-serif text-[#090040]">
+                  <CardTitle className="text-2xl font-serif text-[#0f0d1e]">
                     Confirm Your Payment
                   </CardTitle>
-                  <CardDescription className="font-sans">
+                  <CardDescription className="font-sans text-[#6d6888]">
                     Once you&apos;ve paid, submit your details here for manual payments only.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-5">
                     {[
                       { id: 'fullName', label: 'Full Name (as shown on the invoice)', type: 'text' },
                       { id: 'address', label: 'Address', type: 'text' },
@@ -177,7 +177,7 @@ Purpose of Payment: ${formData.purposeOfPayment}`
                       { id: 'purposeOfPayment', label: 'Purpose of Payment', type: 'text' },
                     ].map((f) => (
                       <div key={f.id}>
-                        <label htmlFor={f.id} className="block text-sm font-medium text-gray-700 mb-1 font-sans">
+                        <label htmlFor={f.id} className="block text-sm font-medium text-[#342f50] mb-2 font-sans">
                           {f.label}
                         </label>
                         <Input
@@ -187,13 +187,14 @@ Purpose of Payment: ${formData.purposeOfPayment}`
                           onChange={handleInputChange}
                           required
                           placeholder={f.placeholder}
+                          className="border-[#e8e5f5]"
                         />
                       </div>
                     ))}
                     <Button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full btn-signature-primary py-3 text-base"
+                      className="w-full btn-signature-primary py-4 text-base"
                     >
                       {isSubmitting ? 'Submitting...' : 'Confirm Manual Payment'}
                     </Button>
@@ -212,10 +213,10 @@ Purpose of Payment: ${formData.purposeOfPayment}`
 export default function PaymentPage() {
   return (
     <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-[#f8f7ff]">
         <div className="text-center">
-          <div className="w-8 h-8 border-4 border-[#001BB7] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading...</p>
+          <div className="w-8 h-8 border-4 border-[#7C5CF6] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-[#6d6888]">Loading...</p>
         </div>
       </div>
     }>

@@ -52,44 +52,33 @@ Location Address: ${formData.location_address}`
           "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/318c114f9_image.png')",
       }}
     >
-      <div className="absolute inset-0 bg-black/60 z-0" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 xl:py-32 w-full">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+      <div className="absolute inset-0 bg-[#0f0d1e]/70 z-0" />
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 xl:py-36 w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
           {/* Left Content */}
-          <div className="text-white space-y-6 lg:space-y-8 text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold font-serif leading-tight">
+          <div className="text-white space-y-8 lg:space-y-12 text-center lg:text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-serif leading-tight">
               Premium{' '}
-              <span className="gradient-text block mt-2">Fiber Internet Service</span>
+              <span className="gradient-text block mt-3">Fiber Internet Service</span>
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-blue-100 max-w-lg mx-auto lg:mx-0 font-sans leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-[#bdb8d8] max-w-xl mx-auto lg:mx-0 font-sans leading-relaxed">
               Enjoy lightning-fast speeds and reliable connectivity with our advanced internet solutions. 24/7 dedicated support.
             </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4 sm:p-6 glass-card">
-              <div className="text-2xl sm:text-3xl xl:text-4xl font-bold gradient-text mb-2">
-                Plans Starting at NLe 700
-              </div>
-              <div className="text-sm sm:text-base text-blue-100">
-                10 Mbps Kombra &bull; Unlimited Data &bull; Installation NLe 1,000
-              </div>
-            </div>
-            <Button className="btn-signature-primary px-6 sm:px-10 py-3 sm:py-4 text-sm sm:text-lg font-serif font-bold rounded-xl w-full sm:w-auto">
-              Get Connected Today
-            </Button>
           </div>
 
           {/* Right Form */}
           <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
-            <Card className="w-full max-w-md glass-card-strong p-4 sm:p-6 lg:p-8 rounded-3xl shadow-2xl tech-glow border-0">
+            <Card className="w-full max-w-md glass-card-strong p-6 sm:p-8 lg:p-10 rounded-3xl border-0">
               {/* Tabs */}
-              <div className="flex bg-gradient-to-r from-[#FFCC00] to-[#FEA405] rounded-full p-1 mb-6 sm:mb-8">
+              <div className="flex bg-gradient-to-r from-[#FFB547] to-[#ffcc5c] rounded-full p-1 mb-8 sm:mb-10">
                 {['Home', 'Business', 'Institution'].map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`flex-1 py-2 sm:py-3 text-xs sm:text-sm font-bold font-serif rounded-full transition-all uppercase tracking-wider ${
+                    className={`flex-1 py-3 sm:py-4 text-xs sm:text-sm font-bold font-serif rounded-full transition-all uppercase tracking-wider ${
                       activeTab === tab
-                        ? 'bg-white text-[#001BB7] shadow-lg'
-                        : 'text-[#001BB7] hover:bg-white/10'
+                        ? 'bg-white text-[#0f0d1e]'
+                        : 'text-[#0f0d1e] hover:bg-white/20'
                     }`}
                   >
                     {tab}
@@ -98,8 +87,8 @@ Location Address: ${formData.location_address}`
               </div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                   {[
                     ['first_name', 'First Name *'],
                     ['last_name', 'Last Name *'],
@@ -111,7 +100,7 @@ Location Address: ${formData.location_address}`
                       <Input
                         value={formData[field as keyof typeof formData]}
                         onChange={(e) => handleInputChange(field, e.target.value)}
-                        className="signature-input rounded-xl border-2 h-10 sm:h-12"
+                        className="signature-input rounded-xl border-2 h-12 sm:h-14"
                         required
                       />
                     </div>
@@ -125,7 +114,7 @@ Location Address: ${formData.location_address}`
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="signature-input rounded-xl border-2 h-10 sm:h-12"
+                    className="signature-input rounded-xl border-2 h-12 sm:h-14"
                     placeholder="+232 XX XXX XXXX"
                     required
                   />
@@ -138,7 +127,7 @@ Location Address: ${formData.location_address}`
                     type="text"
                     value={formData.address}
                     onChange={(e) => handleInputChange('address', e.target.value)}
-                    className="signature-input rounded-xl border-2 h-10 sm:h-12"
+                    className="signature-input rounded-xl border-2 h-12 sm:h-14"
                     placeholder="Your residential address"
                     required
                   />
@@ -150,7 +139,7 @@ Location Address: ${formData.location_address}`
                   <Input
                     value={formData.location_address}
                     onChange={(e) => handleInputChange('location_address', e.target.value)}
-                    className="signature-input rounded-xl border-2 h-12 sm:h-14"
+                    className="signature-input rounded-xl border-2 h-14 sm:h-16"
                     placeholder="Enter your location in Sierra Leone"
                     required
                   />
@@ -158,7 +147,7 @@ Location Address: ${formData.location_address}`
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-signature-primary py-3 sm:py-4 rounded-xl font-serif font-bold mt-6 uppercase tracking-wider"
+                  className="w-full btn-signature-primary py-4 sm:py-5 rounded-xl font-serif font-bold mt-8 uppercase tracking-wider text-base"
                 >
                   {isSubmitting ? 'Checking Coverage...' : 'Check Coverage & Get Quote'}
                 </Button>

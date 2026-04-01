@@ -12,15 +12,15 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
             Our Internet <span className="gradient-text">Services</span>
           </h1>
-          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+          <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] mb-12 font-sans">
             Comprehensive internet solutions for homes, businesses, and institutions across Sierra Leone.
           </p>
-          <Button asChild className="btn-signature-primary px-8 py-3 text-lg font-serif font-bold rounded-xl">
+          <Button asChild className="btn-signature-primary px-10 py-4 text-lg font-serif font-bold rounded-xl">
             <Link href="/plans">View Our Plans</Link>
           </Button>
         </div>

@@ -1,24 +1,23 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, Poppins } from 'next/font/google'
+import { Outfit, Sora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const inter = Inter({ 
+const outfit = Outfit({ 
   subsets: ["latin"],
-  variable: '--font-inter',
+  variable: '--font-outfit',
   display: 'swap',
 })
 
-const poppins = Poppins({ 
+const sora = Sora({ 
   subsets: ["latin"],
-  weight: ['400', '500', '600', '700', '800'],
-  variable: '--font-poppins',
+  variable: '--font-sora',
   display: 'swap',
 })
 
 export const metadata: Metadata = {
   title: 'Signature Connect - Premium Internet Service Provider | Sierra Leone',
-  description: 'Sierra Leone\'s leading internet service provider since 2022. Fast, reliable fiber, microwave, and Starlink connectivity for homes and businesses. Plans starting at NLe 700/month.',
+  description: 'Sierra Leone\'s leading internet service provider since 2022. Fast, reliable fiber, microwave, and Starlink connectivity for homes and businesses.',
   keywords: 'internet, ISP, Sierra Leone, fiber, broadband, Freetown, Signature Connect, high-speed internet',
   authors: [{ name: 'Signature Connect' }],
   openGraph: {
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#001BB7',
+  themeColor: '#7C5CF6',
   width: 'device-width',
   initialScale: 1,
 }
@@ -40,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${sora.variable}`}>
       <body className="font-sans antialiased">
         {children}
         <Analytics />

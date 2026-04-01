@@ -43,13 +43,13 @@ const departments = [
   {
     icon: Phone,
     dept: 'Sales',
-    nums: ['+232 72 568 290', '+232 30 66 81 78', '+232 73 055 365'],
+    nums: ['+232 33 23 36 20', '+232 30 66 81 78', '+232 73 055 365'],
     email: 'info@signature-connect.com',
   },
   {
     icon: MessageSquare,
     dept: 'Technical Support',
-    nums: ['+232 33 31 31 04', '+232 74 507 552', '+232 78 31 31 04'],
+    nums: ['+232 33 23 36 20', '+232 74 507 552', '+232 78 31 31 04'],
     email: 'noc@signature-connect.com',
   },
   {
@@ -61,7 +61,7 @@ const departments = [
   {
     icon: Phone,
     dept: 'Feedback',
-    nums: ['+232 76 340 991'],
+    nums: ['+232 33 23 36 20'],
     email: 'ceo@signature-connect.com',
   },
 ]
@@ -73,29 +73,29 @@ export default function SupportPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
             Customer <span className="gradient-text">Support</span>
           </h1>
-          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+          <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             We&apos;re here to help. Find answers to common questions or get in touch with our dedicated support team, available 24/7.
           </p>
         </div>
       </section>
 
       {/* Support Cards */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-[#f8f7ff]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {supportCards.map(({ icon: Icon, title, desc, action }) => (
-              <Card key={title} className="text-center shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <Card key={title} className="text-center border border-[#e8e5f5] hover:-translate-y-2 transition-transform duration-300">
                 <CardHeader>
-                  <div className="mx-auto bg-[#001BB7] text-white w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                  <div className="mx-auto bg-[#7C5CF6] text-white w-16 h-16 rounded-full flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8" />
                   </div>
-                  <CardTitle className="text-2xl font-bold text-[#090040] font-serif">{title}</CardTitle>
-                  <CardDescription className="font-sans">{desc}</CardDescription>
+                  <CardTitle className="text-2xl font-bold text-[#0f0d1e] font-serif">{title}</CardTitle>
+                  <CardDescription className="font-sans text-[#6d6888]">{desc}</CardDescription>
                 </CardHeader>
                 <CardContent>{action}</CardContent>
               </Card>
@@ -105,28 +105,28 @@ export default function SupportPage() {
       </section>
 
       {/* Departments */}
-      <section className="py-14 lg:py-24 bg-gray-50">
+      <section className="py-20 lg:py-32 bg-[#f8f7ff]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl text-center text-[#001BB7] font-bold mb-12">
+          <h2 className="font-serif text-4xl sm:text-5xl text-center text-[#0f0d1e] font-bold mb-16">
             Find the right department
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
             {departments.map(({ icon: Icon, dept, nums, email }) => (
-              <div key={dept} className="bg-white p-8 rounded-2xl shadow-lg">
-                <Icon className="w-12 h-12 mx-auto text-orange-500 mb-4" />
-                <h3 className="text-2xl font-bold text-[#090040] font-serif mb-2">{dept}</h3>
+              <div key={dept} className="bg-white p-10 rounded-2xl border border-[#e8e5f5]">
+                <Icon className="w-12 h-12 mx-auto text-[#FFB547] mb-6" />
+                <h3 className="text-2xl font-bold text-[#0f0d1e] font-serif mb-4">{dept}</h3>
                 {nums.map((n) => (
                   <a
                     key={n}
                     href={`tel:${n.replace(/\s/g, '')}`}
-                    className="block text-lg text-blue-600 hover:underline font-sans"
+                    className="block text-lg text-[#7C5CF6] hover:underline font-sans"
                   >
                     {n}
                   </a>
                 ))}
                 <a
                   href={`mailto:${email}`}
-                  className="block text-sm text-gray-600 hover:underline mt-2 font-sans"
+                  className="block text-sm text-[#6d6888] hover:underline mt-4 font-sans"
                 >
                   {email}
                 </a>

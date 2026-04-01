@@ -47,19 +47,19 @@ const products = [
 
 function ProductShowcase() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
+    <section className="py-20 lg:py-32 bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold font-serif text-[#001BB7]">Our Products</h2>
-          <p className="mt-4 text-lg text-gray-600 font-sans">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold font-serif text-[#0f0d1e]">Our Products</h2>
+          <p className="mt-6 text-lg text-[#6d6888] font-sans">
             High-quality hardware to enhance your internet experience.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {products.map((product, index) => (
             <Card
               key={index}
-              className="flex flex-col shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="flex flex-col border border-[#e8e5f5] hover:-translate-y-2 transition-transform duration-300"
             >
               <CardHeader>
                 <img
@@ -67,10 +67,10 @@ function ProductShowcase() {
                   alt={product.name}
                   className="object-cover rounded-t-lg w-full h-48"
                 />
-                <CardTitle className="text-xl font-bold text-gray-800 font-serif mt-4">
+                <CardTitle className="text-xl font-bold text-[#0f0d1e] font-serif mt-6">
                   {product.name}
                 </CardTitle>
-                <CardDescription className="font-sans">{product.description}</CardDescription>
+                <CardDescription className="font-sans text-[#6d6888]">{product.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-end">
                 <Button asChild className="btn-signature-primary w-full mt-4">
@@ -100,12 +100,12 @@ export default function PlansPage() {
       <Header />
 
       {/* Hero */}
-      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+      <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
             Find Your <span className="gradient-text">Perfect Plan</span>
           </h1>
-          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+          <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">
             Whether for home, business, or enterprise, we have a premium connectivity solution tailored to your needs.
           </p>
         </div>

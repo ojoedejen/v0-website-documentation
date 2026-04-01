@@ -10,7 +10,7 @@ const services = [
     title: 'High-Speed Internet',
     description: 'Lightning-fast fiber optic internet with speeds up to 10 Gbps for seamless streaming, gaming, and working.',
     featured: true,
-    color: 'from-blue-400 to-blue-600',
+    color: 'from-[#7C5CF6] to-[#9370ff]',
     route: '/plans',
   },
   {
@@ -18,7 +18,7 @@ const services = [
     title: 'In-Home WiFi',
     description: 'Complete home coverage with our advanced mesh WiFi systems, eliminating dead zones everywhere.',
     featured: false,
-    color: 'from-green-400 to-green-600',
+    color: 'from-[#10b981] to-[#34d399]',
     route: '/plans',
   },
   {
@@ -26,7 +26,7 @@ const services = [
     title: 'Streaming Services',
     description: 'Optimized bandwidth for 4K streaming, video calls, and real-time content delivery.',
     featured: false,
-    color: 'from-purple-400 to-purple-600',
+    color: 'from-[#9370ff] to-[#ae96ff]',
     route: '/plans',
   },
   {
@@ -34,7 +34,7 @@ const services = [
     title: 'Business Solutions',
     description: 'Enterprise-grade connectivity with SLA guarantees, dedicated support, and custom infrastructure.',
     featured: false,
-    color: 'from-red-400 to-red-600',
+    color: 'from-[#f43f5e] to-[#fb7185]',
     route: '/business',
   },
   {
@@ -42,7 +42,7 @@ const services = [
     title: 'Starlink Microwave',
     description: 'Satellite-powered internet reaching even the most remote areas of Sierra Leone.',
     featured: false,
-    color: 'from-orange-400 to-orange-600',
+    color: 'from-[#FFB547] to-[#ffcc5c]',
     route: '/plans',
   },
   {
@@ -50,51 +50,51 @@ const services = [
     title: 'VPN & IP Protection',
     description: 'Secure your connection with static IPs and VPN services for enhanced privacy and security.',
     featured: false,
-    color: 'from-indigo-400 to-indigo-600',
+    color: 'from-[#38bdf8] to-[#7dd3fc]',
     route: '/support',
   },
 ]
 
 export default function ServicesSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-[#001BB7] mb-4">
+    <section className="py-24 sm:py-32 lg:py-40 min-h-screen flex items-center bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="text-center mb-16 lg:mb-24">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-[#0f0d1e] mb-6">
             Our <span className="gradient-text">Services</span>
           </h2>
-          <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto font-sans">
+          <p className="text-[#6d6888] text-lg sm:text-xl max-w-2xl mx-auto font-sans">
             Comprehensive internet solutions for homes, businesses, and institutions across Sierra Leone.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {services.map((service, index) => {
             const Icon = service.icon
             return (
               <div
                 key={index}
-                className={`rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:-translate-y-2 ${
+                className={`rounded-2xl p-8 sm:p-10 transition-all duration-300 hover:-translate-y-2 ${
                   service.featured
-                    ? 'bg-[#090040] text-white shadow-2xl'
-                    : 'bg-gray-50 hover:bg-white hover:shadow-xl border border-gray-100'
+                    ? 'bg-[#0f0d1e] text-white'
+                    : 'bg-[#f8f7ff] hover:bg-white border border-[#e8e5f5]'
                 }`}
               >
                 <div
-                  className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-gradient-to-r ${service.color}`}
+                  className={`w-16 h-16 rounded-xl flex items-center justify-center mb-8 bg-gradient-to-r ${service.color}`}
                 >
-                  <Icon className="w-7 h-7 text-white" />
+                  <Icon className="w-8 h-8 text-white" />
                 </div>
                 <h3
-                  className={`text-xl sm:text-2xl font-bold font-serif mb-3 ${
-                    service.featured ? 'text-white' : 'text-[#090040]'
+                  className={`text-2xl sm:text-3xl font-bold font-serif mb-4 ${
+                    service.featured ? 'text-white' : 'text-[#0f0d1e]'
                   }`}
                 >
                   {service.title}
                 </h3>
                 <p
-                  className={`text-sm sm:text-base leading-relaxed mb-6 font-sans ${
-                    service.featured ? 'text-blue-100' : 'text-gray-600'
+                  className={`text-base sm:text-lg leading-relaxed mb-8 font-sans ${
+                    service.featured ? 'text-[#bdb8d8]' : 'text-[#6d6888]'
                   }`}
                 >
                   {service.description}
@@ -105,7 +105,7 @@ export default function ServicesSection() {
                     className={`group ${
                       service.featured
                         ? 'btn-signature-primary'
-                        : 'border-gray-300 text-gray-700 hover:bg-gray-100'
+                        : 'border-[#e8e5f5] text-[#6d6888] hover:bg-[#f0eefb]'
                     }`}
                   >
                     Learn More

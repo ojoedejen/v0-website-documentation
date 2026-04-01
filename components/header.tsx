@@ -19,8 +19,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-[#001BB7] text-white py-3 sm:py-4 px-4 relative shadow-lg">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#001BB7] to-[#090040]" />
+    <header className="bg-[#0f0d1e] text-white py-3 sm:py-4 px-4 relative">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#7C5CF6]/10 to-[#0f0d1e]" />
       <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
         <div className="flex items-center">
           <Link href="/">
@@ -38,18 +38,18 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.path}
-              className="hover:text-[#FFCC00] transition-colors font-medium font-serif relative group"
+              className="hover:text-[#FFB547] transition-colors font-medium font-serif relative group"
             >
               {item.name}
-              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFCC00] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
+              <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#FFB547] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
             </Link>
           ))}
         </nav>
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3 lg:gap-4">
-          <Globe className="w-5 h-5 text-[#00D4FF] cursor-pointer" />
-          <HelpCircle className="w-5 h-5 text-[#00D4FF] cursor-pointer" />
+          <Globe className="w-5 h-5 text-[#9370ff] cursor-pointer" />
+          <HelpCircle className="w-5 h-5 text-[#9370ff] cursor-pointer" />
           <Button asChild className="btn-signature-outline rounded-full px-6 py-2 font-serif font-semibold">
             <a href="https://wa.me/23233233620" target="_blank" rel="noopener noreferrer">
               Contact Sales
@@ -70,13 +70,13 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-[#001BB7] border-t border-white/20 z-50 shadow-2xl">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#0f0d1e] border-t border-white/10 z-50">
           <nav className="px-4 py-6 space-y-4">
             {navLinks.map((item) => (
               <Link
                 key={item.name}
                 href={item.path}
-                className="block hover:text-[#FFCC00] font-medium font-serif py-2 border-b border-white/10 hover:bg-white/5 px-2 rounded"
+                className="block hover:text-[#FFB547] font-medium font-serif py-2 border-b border-white/10 hover:bg-white/5 px-2 rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

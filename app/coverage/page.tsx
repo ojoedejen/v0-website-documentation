@@ -41,12 +41,12 @@ export default function CoveragePage() {
       <Header />
 
       {/* Hero with Coverage Check */}
-      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+      <section className="py-20 lg:py-32 min-h-[60vh] flex items-center relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
             Explore Our <span className="gradient-text">Network Coverage</span>
           </h1>
-          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+          <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] mb-12 font-sans">
             Enter your address to see if Signature Connect&apos;s premium fiber service is available in your area.
           </p>
           <form onSubmit={handleCheckCoverage} className="max-w-2xl mx-auto">
@@ -56,12 +56,12 @@ export default function CoveragePage() {
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 placeholder="Enter your address (e.g., Wilkinson Road, Freetown, Sierra Leone)"
-                className="w-full signature-input rounded-full h-14 pl-6 pr-40"
+                className="w-full signature-input rounded-full h-16 pl-8 pr-44"
               />
               <Button
                 type="submit"
                 disabled={loading}
-                className="btn-signature-primary absolute right-2 top-1/2 -translate-y-1/2 rounded-full px-6 py-2 h-10"
+                className="btn-signature-primary absolute right-2 top-1/2 -translate-y-1/2 rounded-full px-8 py-3 h-12"
               >
                 {loading ? 'Checking...' : 'Check Now'}
               </Button>
@@ -69,15 +69,15 @@ export default function CoveragePage() {
           </form>
           {result && (
             <div
-              className={`mt-6 p-4 rounded-lg max-w-2xl mx-auto text-white font-semibold ${
-                result.available ? 'bg-green-500/80' : 'bg-red-500/80'
+              className={`mt-8 p-5 rounded-lg max-w-2xl mx-auto text-white font-semibold ${
+                result.available ? 'bg-[#10b981]/80' : 'bg-[#f43f5e]/80'
               }`}
             >
               <div className="flex items-center justify-center">
                 {result.available ? (
-                  <CheckCircle className="w-6 h-6 mr-2" />
+                  <CheckCircle className="w-6 h-6 mr-3" />
                 ) : (
-                  <XCircle className="w-6 h-6 mr-2" />
+                  <XCircle className="w-6 h-6 mr-3" />
                 )}
                 {result.message}
               </div>
@@ -87,12 +87,12 @@ export default function CoveragePage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-14 lg:py-24 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-serif text-4xl text-center text-[#001BB7] font-bold mb-10">
+      <section className="py-20 lg:py-32 min-h-screen flex items-center bg-[#f8f7ff]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+          <h2 className="font-serif text-4xl sm:text-5xl text-center text-[#0f0d1e] font-bold mb-12">
             Our Rapidly Expanding Network
           </h2>
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl h-96 lg:h-[500px]">
+          <div className="relative rounded-2xl overflow-hidden h-96 lg:h-[550px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2020767.9112163887!2d-13.157359968786485!3d8.42008430330613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf0106183aabf343%3A0x5369e9cdc72cf719!2sSierra%20Leone!5e0!3m2!1sen!2ssl!4v1758162872827!5m2!1sen!2ssl"
               width="100%"
@@ -108,33 +108,33 @@ export default function CoveragePage() {
       </section>
 
       {/* Coverage Info */}
-      <section className="py-14 lg:py-24 bg-white">
+      <section className="py-20 lg:py-32 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-gray-50 rounded-2xl">
-              <div className="w-16 h-16 rounded-full bg-[#001BB7] mx-auto mb-4 flex items-center justify-center">
+          <div className="grid md:grid-cols-3 gap-10">
+            <div className="text-center p-10 bg-[#f8f7ff] rounded-2xl border border-[#e8e5f5]">
+              <div className="w-16 h-16 rounded-full bg-[#7C5CF6] mx-auto mb-6 flex items-center justify-center">
                 <span className="text-2xl text-white font-bold">F</span>
               </div>
-              <h3 className="text-xl font-bold font-serif text-[#090040] mb-2">Fiber Coverage</h3>
-              <p className="text-gray-600 font-sans">
+              <h3 className="text-xl font-bold font-serif text-[#0f0d1e] mb-4">Fiber Coverage</h3>
+              <p className="text-[#6d6888] font-sans">
                 High-speed fiber optic connections available in Freetown and major urban centers.
               </p>
             </div>
-            <div className="text-center p-8 bg-gray-50 rounded-2xl">
-              <div className="w-16 h-16 rounded-full bg-[#FEA405] mx-auto mb-4 flex items-center justify-center">
-                <span className="text-2xl text-white font-bold">M</span>
+            <div className="text-center p-10 bg-[#f8f7ff] rounded-2xl border border-[#e8e5f5]">
+              <div className="w-16 h-16 rounded-full bg-[#FFB547] mx-auto mb-6 flex items-center justify-center">
+                <span className="text-2xl text-[#0f0d1e] font-bold">M</span>
               </div>
-              <h3 className="text-xl font-bold font-serif text-[#090040] mb-2">Microwave Coverage</h3>
-              <p className="text-gray-600 font-sans">
+              <h3 className="text-xl font-bold font-serif text-[#0f0d1e] mb-4">Microwave Coverage</h3>
+              <p className="text-[#6d6888] font-sans">
                 Wireless microwave links connecting Bo, Kenema, and surrounding regions.
               </p>
             </div>
-            <div className="text-center p-8 bg-gray-50 rounded-2xl">
-              <div className="w-16 h-16 rounded-full bg-[#00C853] mx-auto mb-4 flex items-center justify-center">
+            <div className="text-center p-10 bg-[#f8f7ff] rounded-2xl border border-[#e8e5f5]">
+              <div className="w-16 h-16 rounded-full bg-[#10b981] mx-auto mb-6 flex items-center justify-center">
                 <span className="text-2xl text-white font-bold">S</span>
               </div>
-              <h3 className="text-xl font-bold font-serif text-[#090040] mb-2">Starlink Coverage</h3>
-              <p className="text-gray-600 font-sans">
+              <h3 className="text-xl font-bold font-serif text-[#0f0d1e] mb-4">Starlink Coverage</h3>
+              <p className="text-[#6d6888] font-sans">
                 Satellite-powered internet reaching even the most remote locations nationwide.
               </p>
             </div>

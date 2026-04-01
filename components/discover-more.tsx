@@ -23,21 +23,21 @@ const discoverItems = [
 
 export default function DiscoverMore() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 premium-gradient">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-serif text-white mb-4">
+    <section className="py-24 sm:py-32 lg:py-40 min-h-screen flex items-center premium-gradient">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="text-center mb-16 lg:mb-24">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-serif text-white mb-6">
             Discover <span className="gradient-text">More</span>
           </h2>
-          <p className="text-blue-100 text-base sm:text-lg max-w-2xl mx-auto font-sans">
+          <p className="text-[#bdb8d8] text-lg sm:text-xl max-w-2xl mx-auto font-sans">
             Explore our comprehensive range of services designed to keep you connected.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {discoverItems.map((item, index) => (
             <Link key={index} href={item.route}>
-              <div className="group relative rounded-2xl overflow-hidden h-80 sm:h-96 cursor-pointer">
+              <div className="group relative rounded-2xl overflow-hidden h-96 sm:h-[450px] cursor-pointer">
                 {/* Background Image */}
                 <img
                   src={item.image}
@@ -49,18 +49,18 @@ export default function DiscoverMore() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 
                 {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-white text-lg sm:text-xl font-semibold font-serif mb-4 leading-snug">
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <h3 className="text-white text-xl sm:text-2xl font-semibold font-serif mb-6 leading-snug">
                     {item.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-[#FFCC00] font-semibold font-serif group-hover:gap-4 transition-all">
+                  <div className="flex items-center gap-2 text-[#FFB547] font-semibold font-serif group-hover:gap-4 transition-all">
                     <span>Discover More</span>
                     <ArrowRight className="w-5 h-5" />
                   </div>
                 </div>
 
                 {/* Hover Border Effect */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#FFCC00] rounded-2xl transition-colors duration-300" />
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#FFB547] rounded-2xl transition-colors duration-300" />
               </div>
             </Link>
           ))}
