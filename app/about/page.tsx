@@ -31,7 +31,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="py-20 lg:py-32 min-h-[50vh] flex items-center relative z-0 premium-gradient">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center w-full">
-          <h1 className="max-w-2xl mx-auto font-serif font-bold text-5xl text-white mb-8 md:text-6xl md:leading-normal">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-8xl text-white mb-8 md:text-6xl md:leading-normal">
             Transforming Connectivity with <span className="gradient-text">Premium Technology</span>
           </h1>
           <p className="max-w-xl mx-auto text-lg font-normal leading-7 text-[#bdb8d8] font-sans">

@@ -49,7 +49,7 @@ const departments = [
   {
     icon: MessageSquare,
     dept: 'Technical Support',
-    nums: ['+232 33 23 36 20', '+232 74 507 552', '+232 78 31 31 04'],
+    nums: ['+232 33 31 31 04', '+232 74 507 552', '+232 78 31 31 04'],
     email: 'noc@signature-connect.com',
   },
   {
@@ -61,7 +61,7 @@ const departments = [
   {
     icon: Phone,
     dept: 'Feedback',
-    nums: ['+232 33 23 36 20'],
+    nums: ['+232 76 34 09 91'],
     email: 'ceo@signature-connect.com',
   },
 ]

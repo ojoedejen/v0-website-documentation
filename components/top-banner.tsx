@@ -9,7 +9,7 @@ export default function TopBanner() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 text-xs sm:text-sm font-bold font-serif uppercase tracking-wider">
           <div className="flex items-center gap-1 sm:gap-2">
             <Phone className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span>For Feedback please call or WhatsApp +232 33233620</span>
+            <span>For Feedback please Only call on WhatsApp +232 76 340991</span>
           </div>
         </div>
       </div>

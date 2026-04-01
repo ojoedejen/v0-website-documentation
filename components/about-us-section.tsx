@@ -1,8 +1,8 @@
 "use client"
 
 const stats = [
-  { value: '3+', label: 'Years of Excellence' },
-  { value: '70+', label: 'Dedicated Staff' },
+  { value: '5+', label: 'Years of Excellence' },
+  { value: '15+', label: 'Dedicated Staff' },
   { value: '24/7', label: 'Premium Support' },
 ]
 

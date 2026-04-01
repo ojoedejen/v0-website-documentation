@@ -105,42 +105,7 @@ export default function NetworkStatusPage() {
           </div>
 
           {/* Recent Incidents */}
-          <div>
-            <h2 className="font-serif text-3xl text-center text-[#0f0d1e] font-bold mb-8">
-              Recent Incidents
-            </h2>
-            {recentIncidents.length > 0 ? (
-              <div className="space-y-5">
-                {recentIncidents.map((incident) => {
-                  const config = statusConfig[incident.status]
-                  const Icon = config.icon
-                  return (
-                    <div key={incident.id} className="bg-white p-8 rounded-xl border border-[#e8e5f5]">
-                      <div className="flex items-start justify-between">
-                        <div>
-                          <h3 className="font-semibold font-serif text-[#0f0d1e] text-lg">
-                            {incident.title}
-                          </h3>
-                          <p className="text-sm text-[#6d6888] font-sans mt-2">{incident.date}</p>
-                          <p className="text-[#6d6888] font-sans mt-3">{incident.description}</p>
-                        </div>
-                        <div
-                          className={`flex items-center gap-1 px-4 py-1.5 rounded-full ${config.bgColor} text-white text-sm`}
-                        >
-                          <Icon className="w-4 h-4" />
-                          {incident.status}
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-              </div>
-            ) : (
-              <p className="text-center text-[#6d6888] font-sans">
-                No recent incidents to display.
-              </p>
-            )}
-          </div>
+         
         </div>
       </section>
 
