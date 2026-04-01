@@ -46,36 +46,36 @@ Location Address: ${formData.location_address}`
 
   return (
     <section
-      className="relative bg-cover bg-center bg-no-repeat overflow-hidden min-h-screen flex items-center"
+      className="relative bg-cover bg-center bg-no-repeat overflow-hidden flex items-center"
       style={{
         backgroundImage:
           "url('https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/318c114f9_image.png')",
       }}
     >
-      <div className="absolute inset-0 bg-[#0f0d1e]/70 z-0" />
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 xl:py-36 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
+      <div className="absolute inset-0 bg-black/60 z-0" />
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-5 w-full">
+        <div className="grid lg:grid-cols-2 gap-3 lg:gap-4 items-start">
           {/* Left Content */}
-          <div className="text-white space-y-8 lg:space-y-12 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-serif leading-tight">
+          <div className="text-white space-y-2 lg:space-y-3 text-center lg:text-left">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold font-serif leading-tight">
               Premium{' '}
-              <span className="gradient-text block mt-3">Fiber Internet Service</span>
+              <span className="gradient-text block mt-1">Fiber Internet Service</span>
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-[#bdb8d8] max-w-xl mx-auto lg:mx-0 font-sans leading-relaxed">
+            <p className="text-xs sm:text-sm lg:text-base text-blue-100 max-w-lg mx-auto lg:mx-0 font-sans leading-relaxed">
               Enjoy lightning-fast speeds and reliable connectivity with our advanced internet solutions. 24/7 dedicated support.
             </p>
           </div>
 
           {/* Right Form */}
-          <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
-            <Card className="w-full max-w-md glass-card-strong p-6 sm:p-8 lg:p-10 rounded-3xl border-0">
+          <div className="flex justify-center lg:justify-end mt-2 lg:mt-0">
+            <Card className="w-full max-w-sm glass-card-strong p-2 sm:p-3 lg:p-4 rounded-2xl shadow-2xl tech-glow border-0">
               {/* Tabs */}
-              <div className="flex bg-gradient-to-r from-[#FFB547] to-[#ffcc5c] rounded-full p-1 mb-8 sm:mb-10">
+              <div className="flex bg-gradient-to-r from-[#FFCC00] to-[#FEA405] rounded-full p-1 mb-2 sm:mb-3">
                 {['Home', 'Business', 'Institution'].map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`flex-1 py-3 sm:py-4 text-xs sm:text-sm font-bold font-serif rounded-full transition-all uppercase tracking-wider ${
+                    className={`flex-1 py-1.5 sm:py-2 text-xs font-bold font-serif rounded-full transition-all uppercase tracking-wider ${
                       activeTab === tab
                         ? 'bg-white text-[#0f0d1e]'
                         : 'text-[#0f0d1e] hover:bg-white/20'
@@ -87,59 +87,59 @@ Location Address: ${formData.location_address}`
               </div>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+              <form onSubmit={handleSubmit} className="space-y-1.5 sm:space-y-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-2">
                   {[
                     ['first_name', 'First Name *'],
                     ['last_name', 'Last Name *'],
                   ].map(([field, label]) => (
                     <div key={field}>
-                      <label className="block text-xs sm:text-sm font-semibold font-serif text-white mb-2">
+                      <label className="block text-xs font-semibold font-serif text-white mb-1">
                         {label}
                       </label>
                       <Input
                         value={formData[field as keyof typeof formData]}
                         onChange={(e) => handleInputChange(field, e.target.value)}
-                        className="signature-input rounded-xl border-2 h-12 sm:h-14"
+                        className="signature-input rounded-lg border-2 h-8 sm:h-9"
                         required
                       />
                     </div>
                   ))}
                 </div>
                 <div>
-                  <label className="block text-xs sm:text-sm font-semibold font-serif text-white mb-2">
+                  <label className="block text-xs font-semibold font-serif text-white mb-1">
                     Phone *
                   </label>
                   <Input
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="signature-input rounded-xl border-2 h-12 sm:h-14"
+                    className="signature-input rounded-lg border-2 h-8 sm:h-9"
                     placeholder="+232 XX XXX XXXX"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-xs sm:text-sm font-semibold font-serif text-white mb-2">
+                  <label className="block text-xs font-semibold font-serif text-white mb-1">
                     Address *
                   </label>
                   <Input
                     type="text"
                     value={formData.address}
                     onChange={(e) => handleInputChange('address', e.target.value)}
-                    className="signature-input rounded-xl border-2 h-12 sm:h-14"
+                    className="signature-input rounded-lg border-2 h-8 sm:h-9"
                     placeholder="Your residential address"
                     required
                   />
                 </div>
                 <div>
-                  <label className="block text-xs sm:text-sm font-semibold font-serif text-white mb-2">
+                  <label className="block text-xs font-semibold font-serif text-white mb-1">
                     Location Address *
                   </label>
                   <Input
                     value={formData.location_address}
                     onChange={(e) => handleInputChange('location_address', e.target.value)}
-                    className="signature-input rounded-xl border-2 h-14 sm:h-16"
+                    className="signature-input rounded-lg border-2 h-8 sm:h-9"
                     placeholder="Enter your location in Sierra Leone"
                     required
                   />
@@ -147,7 +147,7 @@ Location Address: ${formData.location_address}`
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-signature-primary py-4 sm:py-5 rounded-xl font-serif font-bold mt-8 uppercase tracking-wider text-base"
+                  className="w-full btn-signature-primary py-2 sm:py-2 rounded-lg font-serif font-bold mt-1 uppercase tracking-wider text-xs"
                 >
                   {isSubmitting ? 'Checking Coverage...' : 'Check Coverage & Get Quote'}
                 </Button>
