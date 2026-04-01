@@ -1,0 +1,74 @@
+import TopBanner from '@/components/top-banner'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
+
+export default function SpeedTestPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      <TopBanner />
+      <Header />
+
+      {/* Hero */}
+      <section className="py-14 lg:py-24 relative z-0 premium-gradient">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
+          <h1 className="max-w-2xl mx-auto font-serif font-bold text-4xl text-white mb-5 md:text-5xl md:leading-normal">
+            Internet <span className="gradient-text">Speed Test</span>
+          </h1>
+          <p className="max-w-xl mx-auto text-base font-normal leading-7 text-blue-100 mb-9 font-sans">
+            Check your internet speed directly from your browser to see how fast your connection is right now.
+          </p>
+        </div>
+      </section>
+
+      {/* Speed Test Widget */}
+      <section className="py-14 lg:py-24 bg-gray-50 flex justify-center">
+        <div className="w-full max-w-4xl mx-auto px-4">
+          <iframe
+            width="100%"
+            height="650px"
+            frameBorder="0"
+            src="//openspeedtest.com/Get-widget.php"
+            className="rounded-xl shadow-2xl"
+            title="Speed Test"
+          />
+        </div>
+      </section>
+
+      {/* Tips Section */}
+      <section className="py-14 lg:py-24 bg-white">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="font-serif text-3xl text-center text-[#001BB7] font-bold mb-12">
+            Tips for Accurate Results
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'Close Other Applications',
+                desc: 'Close any apps or browser tabs that might be using your internet connection.',
+              },
+              {
+                title: 'Use a Wired Connection',
+                desc: 'For the most accurate results, connect directly to your router with an ethernet cable.',
+              },
+              {
+                title: 'Test Multiple Times',
+                desc: 'Run the test several times at different times of day to get an average speed.',
+              },
+              {
+                title: 'Check Device Limits',
+                desc: 'Older devices may not support the full speeds of your internet plan.',
+              },
+            ].map((tip, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl">
+                <h3 className="font-bold font-serif text-[#090040] mb-2">{tip.title}</h3>
+                <p className="text-gray-600 font-sans text-sm">{tip.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  )
+}
