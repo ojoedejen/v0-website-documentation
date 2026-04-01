@@ -45,6 +45,11 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+
+        {/* Desktop Actions */}
+        <div className="hidden md:flex items-center gap-2 lg:gap-3">
+          <Globe className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-300 cursor-pointer" />
+          <HelpCircle className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-300 cursor-pointer" />
           <Button asChild className="bg-yellow-400 text-blue-600 hover:bg-yellow-300 rounded-full px-4 sm:px-5 lg:px-6 py-1.5 sm:py-2 font-serif font-semibold text-xs sm:text-sm">
             <a href="https://wa.me/23233233620" target="_blank" rel="noopener noreferrer">
               Contact Sales
