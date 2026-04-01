@@ -19,8 +19,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-blue-600 text-white py-2 sm:py-2.5 px-3 sm:px-4 relative">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-700/20 to-blue-600" />
+    <header className="text-white py-2 sm:py-2.5 px-3 sm:px-4 relative" style={{ backgroundColor: '#09004c' }}>
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 to-transparent" />
       <div className="max-w-7xl mx-auto flex items-center justify-between relative z-10">
         <div className="flex items-center">
           <Link href="/">
@@ -45,11 +45,6 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-
-        {/* Desktop Actions */}
-        <div className="hidden md:flex items-center gap-2 lg:gap-3">
-          <Globe className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-300 cursor-pointer" />
-          <HelpCircle className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-300 cursor-pointer" />
           <Button asChild className="bg-yellow-400 text-blue-600 hover:bg-yellow-300 rounded-full px-4 sm:px-5 lg:px-6 py-1.5 sm:py-2 font-serif font-semibold text-xs sm:text-sm">
             <a href="https://wa.me/23233233620" target="_blank" rel="noopener noreferrer">
               Contact Sales
@@ -70,7 +65,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-blue-600 border-t border-white/10 z-50">
+        <div className="md:hidden absolute top-full left-0 right-0 border-t border-white/10 z-50" style={{ backgroundColor: '#09004c' }}>
           <nav className="px-3 sm:px-4 py-4 space-y-2">
             {navLinks.map((item) => (
               <Link
