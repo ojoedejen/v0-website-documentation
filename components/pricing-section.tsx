@@ -185,7 +185,7 @@ export default function PricingSection() {
           <h3 className="text-2xl sm:text-3xl font-bold font-serif text-[#0f0d1e] mb-10 text-center">
             Business Plans
           </h3>
-          <p className="text-center text-[#6d6888] mb-20 font-sans text-lg sm:text-xl font-medium">
+          <p className="text-center text-[#FFB547] mb-20 font-sans text-lg sm:text-xl font-bold">
   For Dedicated package request a Quote. All packages are shared.
 </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
