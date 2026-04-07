@@ -22,7 +22,7 @@ const residentialPlans = [
   },
   {
     name: 'Nex Plus',
-    speed: '50 Mbps',
+    speed: '30 Mbps (Shared)',
     price: '1,250',
     badge: 'Most Popular',
     popular: true,
